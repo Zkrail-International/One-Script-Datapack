@@ -10,7 +10,12 @@ fileloop = "loop.mcfunction"
 filehow = "FunctionGuide.txt"
 filerec = "InsertCustomRecipeTemplate.py"
 fileloot = "InsertCustomLootTableEntitiesTemplate.py"
-dataname = "datapackname" # Change datapackName to whatever you wish your datapack to be called. Do not remove the quotes. Do not capitalize.
+dataname = "datapackname" # Change datapackname to whatever you wish your datapack to be called. Do not remove the quotes. Do not capitalize.
+
+def backthree(): # Saving myself 4 lines of code.
+	os.chdir("..")
+	os.chdir("..")
+	os.chdir("..")
 
 import os
 
@@ -50,9 +55,8 @@ with open(filejsontick, "w") as fjt:
 with open(filejsonload, "w") as fjl:
 	fjl.write("{\n \"values\": [\n  \"" + dataname + ":load\"\n ]\n}")
 
-os.chdir("..")
-os.chdir("..")
-os.chdir("..")
+backthree()
+
 os.chdir(dataname)
 
 os.mkdir("functions")
@@ -66,9 +70,7 @@ with open(fileloop, "w") as fl:
 with open(filehow, "w") as fh:
 	fh.write("##\n\n#.mcfunction file type#  .mcfunction file types are used to create functions that are used by minecraft.\n\n#.mcfunction file type use#  Inside of a .mcfunction file type there can only be in game commands. For ex. \"teleport @a 69 420 10\". Each command must be written on a new line, and each command must NOT have / as the first character. That is only for in game, the .mcfunction adds that automatically.\n\n#loop.mcfunction#  The loop.mcfunction file is connected to minecraft/tags/tick in your datapack and will run every tick. The default tick speed is 20 ticks per second, meaning that loop.mcfunction runs 20 times every second.\n\n#load.mcfunction#  The load.mcfunction file runs whenever the world is opened(for single player), whenever the server starts(for mc servers), or whenever you run \"/restart\".\n\n#order#  When you enter commands into the .mcfunction files, the commands run from the top to bottom.\n\n#linking#  You can link other mcfunctions into a mcfunction (using \"function "+ dataname +":[mcfunction name without .mcfunction extension.]\") and those functions will run with the other commands in the mcfunction file.\n\n#checking if it works#  While in minecraft, you can test to see if a function works by running \"/function "+ dataname +":[Mcfunction name without extension.]\" if it gives an error, that means a command was invalid.")
 
-os.chdir("..")
-os.chdir("..")
-os.chdir("..")
+backthree()
 
 os.mkdir("PythonFiles")
 
