@@ -82,20 +82,3 @@ with open(fileloot, "w") as flt:
 	flt.write("##\n\nimport os\n\ndataname = (\"" + dataname + "\")\n\nloot = (\"loottabletemplate.json\")\nread = (\"README.txt\")\n\nos.chdir(\"..\")\nos.chdir(\"data\")\nos.chdir(dataname)\n\nos.mkdir(\"loot_tables\")\n\nos.chdir(\"loot_tables\")\n\nos.mkdir(\"entities\")\n\nos.chdir(\"entities\")\n\nwith open (loot, \"w\") as filewrite:\n\tfilewrite.write(\"##\\n\\nRead README file.\")\n\nwith open (read, \"w\") as filewrite:\n\tfilewrite.write(\"##\\n\\nGo to https://misode.github.io/loot-table/ and check that out. If you do not get the gist of it after a little bit, try taking a tutorial.\")")
 with open(filereadimp, "w") as fri:
 	fri.write("## THESE PYTHON SCRIPTS ONLY WORK IF YOU HAVE NOT CHANGED \"" + dataname + "\" IN THE DATA FILE. ##\n\nThese python scripts are used to create additional content for your datapack, for the new(or truly lazy) datapack creators.")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
