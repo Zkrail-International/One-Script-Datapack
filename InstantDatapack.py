@@ -12,12 +12,12 @@ filerec = "InsertCustomRecipeTemplate.py"
 fileloot = "InsertCustomLootTableEntitiesTemplate.py"
 dataname = "datapackname" # Change datapackname to whatever you wish your datapack to be called. Do not remove the quotes. Do not capitalize.
 
+import os
+
 def backthree(): # Saving myself 4 lines of code.
 	os.chdir("..")
 	os.chdir("..")
 	os.chdir("..")
-
-import os
 
 os.mkdir(dataname)
 
